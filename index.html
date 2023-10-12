@@ -64,8 +64,16 @@
             }
 
             function deleteItem(index) {
+              const confirmation = confirm("Press okay to confirm")
+              if (confirmation === true){
                 listItemArr.splice(index, 1);
+              }
+              else{
+                return ;
+              }
+
                 counter--;
+
                 loadListItems();
             }
 
